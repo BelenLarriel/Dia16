@@ -1,0 +1,79 @@
+<!-- hamball.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Práctica de Hamball</title>
+    <!-- Agregar el enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+<h1 class="text-center">Práctica de Hamball</h1>
+<p class="text-center">Restricción de Edad: 10-15 años</p>
+<form action="/hamball/registro" method="post">
+
+
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+
+
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" id="apellido" name="apellido" required>
+    </div>
+
+
+    <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" class="form-control" id="edad" name="edad" required>
+    </div>
+
+
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="certificadoMedico" name="certificadoMedico">
+        <label class="form-check-label" for="certificadoMedico">Certificado Médico</label>
+    </div>
+
+
+
+
+    <input type="hidden" name="practica" th:value="${practica}" />
+
+
+
+
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+</form>
+
+
+
+
+
+
+
+<div th:if="${registroExitoso}">
+    <p class="text-success">¡Registro exitoso! Gracias por unirte.</p>
+</div>
+
+
+
+<div class="mt-4">
+    <p class="text-center"><strong>Nota:</strong> Este formulario aún no está completo. Deberá presentar la FOTOCOPIA DE CÉDULA DEL SOLICITANTE Y DEL PADRE/TUTOR. Presentar los documentos de forma presencial en la oficina de Coordinación Deportiva. </p>
+    <p class="text-center">De Lunes a Viernes de 08:00 a 19:00Hs y Sábados de 08:00 a 12:00Hs.</p>
+</div>
+
+
+
+
+<!-- Agregar el enlace a Bootstrap JS y Popper.js (requerido para algunos componentes de Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
