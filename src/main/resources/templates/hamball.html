@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Práctica de Hamball</title>
+    <title>Práctica de Handball</title>
     <!-- Agregar el enlace a Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #FFA500 !important;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 <body class="container mt-5">
-<h1 class="text-center">Práctica de Hamball</h1>
+<h1 class="text-center">Práctica de Handball</h1>
 <p class="text-center">Restricción de Edad: 10-15 años</p>
 <form action="/hamball/registro" method="post">
 
@@ -58,7 +86,7 @@
 
 
 <div th:if="${registroExitoso}">
-    <p class="text-success">¡Registro exitoso! Gracias por unirte.</p>
+    <p class="text-success">¡Registro exitoso!</p>
 </div>
 
 

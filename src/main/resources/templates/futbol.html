@@ -7,7 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase de Fútbol</title>
     <!-- Agregar el enlace a Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: #FFA500 !important;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 
 
@@ -58,7 +87,7 @@
 
 
 <div th:if="${registroExitoso}">
-    <p class="text-success">¡Registro exitoso! Gracias por unirte al equipo de fútbol.</p>
+    <p class="text-success">¡Registro exitoso!</p>
 </div>
 
 
