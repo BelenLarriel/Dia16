@@ -19,13 +19,15 @@ public class HamballController {
     @GetMapping("/hamball")
     public String hamballPage(Model model) {
         model.addAttribute("practica", "hamball");
+        model.addAttribute("registro", new Registro());
 
         return "hamball";
     }
 
     @PostMapping("/hamball/registro")
     public String registrarHamball(Registro registro, Model model) {
-        registro.setPractica((String) model.getAttribute("practica"));
+
+
         registroRepository.save(registro);
         model.addAttribute("registroExitoso", true);
         return "redirect:/hamball";

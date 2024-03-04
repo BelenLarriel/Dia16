@@ -41,7 +41,7 @@
 <body class="container mt-5">
 <h1 class="text-center">Práctica de Handball</h1>
 <p class="text-center">Restricción de Edad: 10-15 años</p>
-<form action="/hamball/registro" method="post">
+<form action="/hamball/registro" method="post" th:object="${registro}">
 
 
     <div class="form-group">
@@ -64,14 +64,14 @@
 
 
     <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="certificadoMedico" name="certificadoMedico">
-        <label class="form-check-label" for="certificadoMedico">Certificado Médico</label>
+        <input type="checkbox" class="form-check-input" id="tieneCertificadoMedico" name="tieneCertificadoMedico">
+        <label class="form-check-label" for="tieneCertificadoMedico">Certificado Médico</label>
     </div>
 
 
 
 
-    <input type="hidden" name="practica" th:value="${practica}" />
+    <input type="hidden" name="practica" id= "practica" th:value="${practica}" />
 
 
 
