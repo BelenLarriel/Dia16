@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,7 +109,7 @@
             <div class="col-md-6">
                 <div class="card">
 
-                    <img src="../static/imagen/futbol.png" class="card-img-top" alt="Imagen de Fútbol">
+                    <img th:src="@{../imagen/futbol.png}" class="card-img-top" alt="Imagen de Fútbol">
                     <div class="card-body bg-info">
                         <h5 class="card-title ">Práctica de Handball</h5>
                         <p class="mb-4 text-justify">
@@ -126,7 +126,7 @@
 
             <div class="col-md-6">
                 <div class="card" >
-                    <img src="../static/imagen/Hambal.png" class="card-img-top" alt="Imagen de Fútbol">
+                    <img th:src="@{../imagen/Hambal.png}" class="card-img-top" alt="Imagen de Fútbol">
 
                     <div class="card-body bg-info">
                         <h5 class="card-title">Práctica de Fútbol</h5>
